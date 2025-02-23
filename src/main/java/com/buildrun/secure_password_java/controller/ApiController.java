@@ -20,7 +20,7 @@ public class ApiController {
 
     @PostMapping
     public ResponseEntity<List<String>> isSafe(@RequestBody BodyRequest request) {
-        var failures = passwordService.validate(request.password());
+        var failures = passwordService.validate(request);
 
         if (failures.isEmpty()) {
             return ResponseEntity.noContent().build();
