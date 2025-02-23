@@ -18,25 +18,25 @@ public class PasswordSecure {
         return true;
     }
     public boolean hasUpperCase() {
-       if (!Pattern.matches(".*[A-Z].*", password)) {
+       if (Pattern.matches(".*[A-Z].*", password)) {
           return true;
        }
        return false;
    }
     public  boolean hasLowerCase() {
-       if (!Pattern.matches(".*[a-z].*", password)) {
+       if (Pattern.matches(".*[a-z].*", password)) {
            return true;
        }
        return false;
    }
     public  boolean hasDigit() {
-       if (!Pattern.matches(".*[0-9].*", password)) {
+       if (Pattern.matches(".*[0-9].*", password)) {
            return true;
        }
        return false;
    }
     public   boolean hasSpecialChar() {
-       if (!Pattern.matches(".*[\\W].*", password)) {
+       if (Pattern.matches(".*[\\W].*", password)) {
            return true;
        }
         return false;
